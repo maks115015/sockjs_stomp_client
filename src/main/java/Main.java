@@ -21,16 +21,14 @@ import org.springframework.web.socket.sockjs.client.WebSocketTransport;
 import org.springframework.web.socket.sockjs.frame.Jackson2SockJsMessageCodec;
 
 import java.lang.reflect.Type;
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
-import java.util.concurrent.ExecutionException;
 
 public class Main {
 
-    private static final String HOST = /*"https://exrates.me";*/ "http://localhost:8080";
-    private static final String HEADER_HOST = /*"exrates.me";*/ "localhost:8080";
+    private static final String HOST =  "http://localhost:8080";
+    private static final String HEADER_HOST =  "localhost:8080";
 
     public static void main(String[] args) throws Exception {
         Main client = new Main();
@@ -82,6 +80,7 @@ public class Main {
         return stompClient.connect("ws://localhost:8080/public_socket/", handshakeHeaders, connectHeaders, new MyStompSessionHandler());
     }
 
+    /*not used*/
     private void subscribeOrders(StompSession stompSession) {
         stompSession.subscribe("/app/orders/sfwfrf442fewdf/4", new StompFrameHandler() {
 
@@ -95,6 +94,7 @@ public class Main {
         });
     }
 
+    /*not used*/
     private class MyHandler extends StompSessionHandlerAdapter {
         @Override
         public void afterConnected(StompSession stompSession, StompHeaders stompHeaders) {
