@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.exrates</groupId>
+    <artifactId>app</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <sl4j.version>1.7.7</sl4j.version>
+        <log4j2.version>2.1</log4j2.version>
+        <mysql-driver.version>5.1.38</mysql-driver.version>
+        <commons-dbcp2.version>2.1.1</commons-dbcp2.version>
+        <hikari-cp-version>2.6.0</hikari-cp-version>
+        <servlet-api.version>3.1.0</servlet-api.version>
+        <jstl.version>1.2.1</jstl.version>
+        <spring-jdbc.version>4.3.7.RELEASE</spring-jdbc.version>
+        <spring-web.version>4.3.7.RELEASE</spring-web.version>
+        <spring-tx.version>4.3.7.RELEASE</spring-tx.version>
+        <spring-beans.version>4.3.7.RELEASE</spring-beans.version>
+        <spring-core.version>4.3.7.RELEASE</spring-core.version>
+        <spring-context.version>4.3.7.RELEASE</spring-context.version>
+        <spring-test.version>4.3.7.RELEASE</spring-test.version>
+        <spring-expression.version>4.3.7.RELEASE</spring-expression.version>
+        <spring-security.version>4.1.0.RELEASE</spring-security.version>
+        <spring-websocket.version>4.3.2.RELEASE</spring-websocket.version>
+        <spring-messaging.version>4.3.10.RELEASE</spring-messaging.version>
+        <bitcoinj.version>0.14.3</bitcoinj.version>
+        <aspectj.version>1.8.10</aspectj.version>
+        <flyway.version>4.2.0</flyway.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring-core.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-websocket</artifactId>
+            <version>${spring-websocket.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-messaging</artifactId>
+            <version>${spring-messaging.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-messaging</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.websocket</groupId>
+            <artifactId>javax.websocket-api</artifactId>
+            <version>1.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.tyrus.bundles</groupId>
+            <artifactId>tyrus-standalone-client</artifactId>
+            <version>1.9</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.5.3</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20180130</version>
+        </dependency>
+        <!-- Logging -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>${log4j2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-1.2-api</artifactId>
+            <version>${log4j2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>${log4j2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+            <version>${log4j2.version}</version>
+        </dependency>
+        <!-- Logging -->
+
+
+    </dependencies>
+
+
+</project>
