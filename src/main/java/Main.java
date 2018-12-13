@@ -61,7 +61,7 @@ public class Main {
         System.out.println("csrf token " + csrfToken);
         System.out.println(SESSION_HEADER_NAME + " " + sessionId);
         /*------------------------*/
-        /*step 2 create websocket connection with sockjs and stomp, create request hqeders*/
+        /*step 2 create websocket connection with sockjs and stomp, create request headers*/
         WebSocketHttpHeaders handshakeHeaders = new WebSocketHttpHeaders();
         HttpHeaders headers = new HttpHeaders();
         headers.set("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8");
@@ -80,7 +80,7 @@ public class Main {
         sockJsClient.setMessageCodec(new Jackson2SockJsMessageCodec());
         WebSocketStompClient stompClient = new WebSocketStompClient(sockJsClient);
         stompClient.setMessageConverter(new StringMessageConverter());
-        /*step 3 - connect to socket, subscribe and
+        /*step 3 - connect to socket, subscribe and handle responses
         * subscribe to endpoint and handle responses in MyStompSessionHandler.class */
         return stompClient.connect(HOST.concat("/public_socket/"), handshakeHeaders, connectHeaders, new MyStompSessionHandler());
     }
