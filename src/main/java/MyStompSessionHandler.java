@@ -1,5 +1,4 @@
 
-import org.springframework.messaging.Message;
 import org.springframework.messaging.simp.stomp.StompCommand;
 import org.springframework.messaging.simp.stomp.StompHeaders;
 import org.springframework.messaging.simp.stomp.StompSession;
@@ -8,15 +7,12 @@ import org.springframework.messaging.simp.stomp.StompSessionHandlerAdapter;
 
 public class MyStompSessionHandler extends StompSessionHandlerAdapter {
 
-
-
     @Override
-    public void afterConnected(
-            StompSession session, StompHeaders connectedHeaders) {
+    public void afterConnected(StompSession session, StompHeaders connectedHeaders) {
         System.out.println("try to subscribe ");
-        session.subscribe("/app/orders/sfwfrf442fewdf/4", this);
+        String destination = "/app/orders/sfwfrf442fewdf/4";
+        session.subscribe(destination, this);
         System.out.println("subscribed");
-        System.out.println();
     }
 
     @Override
